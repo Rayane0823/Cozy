@@ -16,3 +16,4 @@ You may prefix your project name with the name of your organization:
 ```bash
 npm create @wildcodeschool/js-monorepo@latest my-org/my-project
 ```
+# ballhub-project
