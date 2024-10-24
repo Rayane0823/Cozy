@@ -1,0 +1,66 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    padding-left: 10px;
+    user-select: none;
+  
+    .logo {
+      cursor: pointer;
+      width: 71px;
+      height: 39px;
+    }
+  
+    .navbar-links {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+  
+      .navbar-link {
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+        font-size: 1rem;
+        color: #17183b;
+        &:hover {
+          color: #3aa39f;
+        }
+      }
+    }
+  
+    .navbar-icons {
+      display: flex;
+      align-items: center;
+  
+      .icon-wrapper {
+        padding: 7px 5px;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+  
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+  
+      .cart-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+  
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 20px;
+          border-left: 1px solid #e5e5e5;
+        }
+      }
+    }
+  }
+  
