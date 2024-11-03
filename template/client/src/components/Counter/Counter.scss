@@ -1,0 +1,29 @@
+@import "../../Variables.scss";
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: fit-content;
+    border: 1px solid #A2A3B1;
+    border-radius: 0.375rem; 
+    font-weight: 600;
+  
+    .button {
+      padding: 1rem; 
+      background: none; 
+      border: none; 
+      cursor: pointer; 
+  
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  
+    .count {
+      width: 2rem; 
+      text-align: center;
+    }
+  }
+  

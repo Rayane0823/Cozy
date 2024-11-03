@@ -1,0 +1,20 @@
+@import "../../Variables.scss";
+
+.wishlist-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    cursor: pointer;
+    user-select: none; 
+    color: $container;
+  
+    &:hover .wishlist-text {
+      color: $hover; 
+  }
+  
+  .wishlist-text {
+    font-size: 1rem; 
+    transition: color 0.3s ease; 
+  }
+}

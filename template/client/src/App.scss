@@ -1,7 +1,36 @@
 @import "./Variables.scss";
 
 body {
-  margin: 0;
-  box-sizing: border-box;
-  background-color: $white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-main {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content-container {
+  margin-top: 54px; 
+  display: flex; 
+  height: calc(100% - 21%); 
+  justify-content: space-between; 
+  padding-left: 20px; 
+  padding-right: 20px; 
+  color: $black; 
+}
+
+.panel-left {
+  display: flex; 
+  height: 100%;
+  width: 40%;
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+.panel-right {
+  display: flex; 
+  height: 100%; 
+  width: 45%;
+  flex-direction: column; 
+  justify-content: space-between; 
 }

@@ -1,5 +1,8 @@
 import React from "react";
 import "./LeftPannel.scss";
+import Counter from "../Counter/Counter"
+import Button from "../Button/Button"
+import WishlistButton from "../WishlistButton/WishlistButton"
 import Stars from "../../../public/images/Stars.svg"
 import Back from "../../../public/images/back.svg"
 import Facebook from "../../../public/images/facebook.svg"
@@ -42,7 +45,8 @@ const LeftPannel = () => {
           className="color-selection"
         />
         <div className="actions">
-          <button>Add To Cart</button> 
+          <Counter />
+          <Button>Add To Cart</Button> 
         </div>
       </div>
       <div className="additional-info">
@@ -50,6 +54,7 @@ const LeftPannel = () => {
           Free 3-5 day shipping • Tool-free assembly • 30-day trial
         </p>
         <div className="wishlist-and-share">
+          <WishlistButton />
           <div className="social-icons">
             <img src={Facebook} alt="Facebook" />
             <img src={Twitter} alt="Twitter" />

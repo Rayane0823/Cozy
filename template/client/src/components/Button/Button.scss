@@ -1,0 +1,23 @@
+@import "../../Variables.scss";
+
+.button {
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.375rem; 
+    background-color: $button-background; 
+    padding: 1rem 2.5rem; 
+    color: white;
+    transition: all 0.2s ease-in-out; 
+  
+    &:hover {
+      background-color: $button-hover;
+      transform: scale(1.05);
+    }
+  
+    &:active {
+      background-color: $button-hover;
+      transform: scale(0.95); 
+    }
+  }
+  

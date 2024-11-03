@@ -32,10 +32,10 @@ const ShoppingCart = (props) => {
       <path
         d="M23 1H19L16.32 14.39C16.2286 14.8504 15.9781 15.264 15.6125 15.5583C15.2468 15.8526 14.7893 16.009 14.32 16H4.6C4.1307 16.009 3.67318 15.8526 3.30754 15.5583C2.94191 15.264 2.69145 14.8504 2.6 14.39L1 6H18"
         stroke={props.isHovered ? "#3AA39F" : "#17183B"}
-        strokeWidth="2" // Changement de stroke-width à strokeWidth
-        strokeLinecap="round" // Changement de stroke-linecap à strokeLinecap
-        strokeLinejoin="round" // Changement de stroke-linejoin à strokeLinejoin
-        className="svg-path" // Classe pour le SCSS
+        strokeWidth="2"
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        className="svg-path"
       />
     </svg>
   );

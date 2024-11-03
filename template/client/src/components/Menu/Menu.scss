@@ -1,8 +1,10 @@
+@import "../../Variables.scss";
+
 .svg-path {
     transition: all 0.2s ease; 
   
     &:hover {
-      stroke: #3aa39f;
+      stroke: $container;
     }
   }
   

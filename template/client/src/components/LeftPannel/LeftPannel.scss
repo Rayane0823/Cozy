@@ -1,3 +1,5 @@
+@import "../../Variables.scss";
+
 .left-pannel {
     .header {
       display: flex;
@@ -10,10 +12,10 @@
       display: flex;
       gap: 0.5rem;
       font-weight: 600;
-      color: #1d2b3a;
+      color: $black;
   
       .category {
-        color: #a2a3b0;
+        color: $grey;
       }
   
       .divider {
@@ -44,7 +46,7 @@
           gap: 0.75rem;
   
           .reviews {
-            color: #a2a3b0;
+            color: $grey;
           }
         }
       }
