@@ -27,7 +27,7 @@
 
     .navigation-buttons {
       display: flex;
-      gap: 20px;
+      gap: 1.25rem;
 
       .navigation-icon {
         cursor: pointer;
@@ -42,7 +42,7 @@
     .background-gradient {
       position: absolute;
       left: 50%;
-      top: 8px;
+      top: 0.5rem;
       height: 60%;
       width: 100%;
       background-image: linear-gradient(to right, transparent, $green-gradiant);
@@ -67,7 +67,7 @@
     display: flex;
     align-items: center;
      justify-content: space-between;
-    gap: 2px;
+    gap: 0.125rem;
 
     .thumbnail {
       cursor: pointer;
@@ -79,8 +79,8 @@
       }
 
       img {
-        width: 88px;
-        height: 88px;
+        width: 5.5rem;
+        height: 5.5rem;
       }
     }
   }

@@ -5,18 +5,18 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $border;
-    padding-left: 10px;
+    padding-left: 0.625rem;
     user-select: none;
   
     .logo {
       cursor: pointer;
-      width: 71px;
-      height: 39px;
+      width: 4.438rem;
+      height: 2.438rem;
     }
   
     .navbar-links {
       display: flex;
-      gap: 10px;
+      gap: 0.625rem;
       list-style: none;
       padding: 0;
   
@@ -32,7 +32,7 @@
       align-items: center;
   
       .icon-wrapper {
-        padding: 7px 5px;
+        padding: 0.438rem 0.313rem;
         cursor: pointer;
         transition: transform 0.2s ease-in-out;
   
@@ -55,7 +55,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          height: 20px;
+          height: 1.25rem;
           border-left: 1px solid $border;
         }
       }
