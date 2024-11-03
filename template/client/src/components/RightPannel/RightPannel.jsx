@@ -28,7 +28,6 @@ const RightPannel = () => {
     setImgIndex((prevIndex) => (prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1));
   };
 
-  // Animation variants
   const variants = {
     enter: (direction) => ({
       x: direction > 0 ? -50 : 50,

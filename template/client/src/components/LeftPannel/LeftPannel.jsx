@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LeftPannel.scss";
 import Counter from "../Counter/Counter"
 import Button from "../Button/Button"
@@ -10,8 +10,26 @@ import Twitter from "../../../public/images/twitter.svg"
 import Pinterest from "../../../public/images/pinterest.svg"
 import Instagram from "../../../public/images/instagram.svg"
 import ColorSelection from "../../../public/images/color_selection.svg"
+import { useCart } from "../Context/CartContext";
 
 const LeftPannel = () => {
+
+  const [quantity, setQuantity] = useState(0)
+  const {addToCart} = useCart();
+
+  const handleAddToCart = () => {
+    if (quantity > 0) {
+      const product = {
+        name: "Meryl Lounge Chair",
+        quantity,
+        price: 149.99,
+      };
+      addToCart(product);
+      setQuantity(0);
+    }
+  };
+  console.log(quantity);
+
   return ( 
   <div className="left-pannel">
       <div className="header">
@@ -45,8 +63,8 @@ const LeftPannel = () => {
           className="color-selection"
         />
         <div className="actions">
-          <Counter />
-          <Button>Add To Cart</Button> 
+          <Counter onChange={setQuantity}/>
+          <Button onClick={() => handleAddToCart(1)}>Add To Cart</Button> 
         </div>
       </div>
       <div className="additional-info">

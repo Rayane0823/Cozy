@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ShoppingCart.scss";
+import CartDisplay from '../CartDisplay/CartDisplay';
+import { useCart } from "../Context/CartContext";
 
 const ShoppingCart = (props) => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const cartItems = useCart();
+
+    const toggleCart = () => {
+      setIsCartOpen(!isCartOpen);
+    };
   return (
+    <>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={24}
@@ -10,6 +19,7 @@ const ShoppingCart = (props) => {
       fill="none"
       height={24}
       {...props}
+      onClick={toggleCart}
       onMouseEnter={() => props.setIsHovered(true)}
       onMouseLeave={() => props.setIsHovered(false)}
     >
@@ -38,6 +48,10 @@ const ShoppingCart = (props) => {
         className="svg-path"
       />
     </svg>
+    {isCartOpen && (
+        <CartDisplay items={cartItems} onClose={toggleCart} />
+      )}
+          </>
   );
 };
 

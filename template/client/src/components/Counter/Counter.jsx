@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Minus from "../../../public/images/minus.svg"
 import Plus from "../../../public/images/plus.svg"
 import './Counter.scss'; 
 
-const Counter = () => {
+const Counter = ({ onChange }) => {
   const [items, setItems] = useState(0);
 
   const handleIncrease = () => {
@@ -14,6 +14,10 @@ const Counter = () => {
   const handleDecrease = () => {
     items > 0 ? setItems(items - 1) : setItems(0);
   };
+
+  useEffect(() => {
+    onChange(items);
+  }, [items, onChange]);
 
   return (
     <div className="counter">
