@@ -6,8 +6,9 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product, quantity) => {
-    setCartItems((prevItems) => {
+    if (quantity <= 0) return;
 
+    setCartItems((prevItems) => {
       const existingProductIndex = prevItems.findIndex(
         (item) => item.id === product.id
       );
@@ -22,8 +23,12 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  const removeFromCart = (productId) => {
+    setCartItems((prevItems) => prevItems.filter(item => item.id !== productId));
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );

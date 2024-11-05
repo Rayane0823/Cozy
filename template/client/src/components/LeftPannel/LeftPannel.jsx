@@ -1,37 +1,37 @@
 import React, { useState } from "react";
 import "./LeftPannel.scss";
-import Counter from "../Counter/Counter"
-import Button from "../Button/Button"
-import WishlistButton from "../WishlistButton/WishlistButton"
-import Stars from "../../../public/images/Stars.svg"
-import Back from "../../../public/images/back.svg"
-import Facebook from "../../../public/images/facebook.svg"
-import Twitter from "../../../public/images/twitter.svg"
-import Pinterest from "../../../public/images/pinterest.svg"
-import Instagram from "../../../public/images/instagram.svg"
-import ColorSelection from "../../../public/images/color_selection.svg"
+import Counter from "../Counter/Counter";
+import Button from "../Button/Button";
+import WishlistButton from "../WishlistButton/WishlistButton";
+import Stars from "../../../public/images/Stars.svg";
+import Back from "../../../public/images/back.svg";
+import Facebook from "../../../public/images/facebook.svg";
+import Twitter from "../../../public/images/twitter.svg";
+import Pinterest from "../../../public/images/pinterest.svg";
+import Instagram from "../../../public/images/instagram.svg";
+import ColorSelection from "../../../public/images/color_selection.svg";
 import { useCart } from "../Context/CartContext";
 
 const LeftPannel = () => {
-
-  const [quantity, setQuantity] = useState(0)
-  const {addToCart} = useCart();
+  const [quantity, setQuantity] = useState(0);
+  const [resetCounter, setResetCounter] = useState(false); 
+  const { addToCart } = useCart();
 
   const handleAddToCart = () => {
     if (quantity > 0) {
       const product = {
+        id: "meryl-lounge-chair",
         name: "Meryl Lounge Chair",
-        quantity,
         price: 149.99,
       };
-      addToCart(product);
+      addToCart(product, quantity);
       setQuantity(0);
+      setResetCounter(true);  
     }
   };
-  console.log(quantity);
 
   return ( 
-  <div className="left-pannel">
+    <div className="left-pannel">
       <div className="header">
         <img src={Back} alt="Back" />
         <p className="breadcrumb">
@@ -63,8 +63,8 @@ const LeftPannel = () => {
           className="color-selection"
         />
         <div className="actions">
-          <Counter onChange={setQuantity}/>
-          <Button onClick={() => handleAddToCart(1)}>Add To Cart</Button> 
+          <Counter onChange={setQuantity} reset={resetCounter} />
+          <Button onClick={handleAddToCart}>Add To Cart</Button> 
         </div>
       </div>
       <div className="additional-info">
@@ -76,14 +76,8 @@ const LeftPannel = () => {
           <div className="social-icons">
             <img src={Facebook} alt="Facebook" />
             <img src={Twitter} alt="Twitter" />
-            <img
-              src={Pinterest}
-              alt="Pinterest"
-            />
-            <img
-              src={Instagram}
-              alt="Instagram"
-            />
+            <img src={Pinterest} alt="Pinterest" />
+            <img src={Instagram} alt="Instagram" />
           </div>
         </div>
       </div>

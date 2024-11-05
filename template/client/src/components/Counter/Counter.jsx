@@ -4,20 +4,26 @@ import Minus from "../../../public/images/minus.svg"
 import Plus from "../../../public/images/plus.svg"
 import './Counter.scss'; 
 
-const Counter = ({ onChange }) => {
+const Counter = ({ onChange, reset }) => {
   const [items, setItems] = useState(0);
 
   const handleIncrease = () => {
-    setItems(items + 1);
+    setItems((prevItems) => prevItems + 1);
   };
 
   const handleDecrease = () => {
-    items > 0 ? setItems(items - 1) : setItems(0);
+    setItems((prevItems) => (prevItems > 0 ? prevItems - 1 : 0));
   };
 
   useEffect(() => {
     onChange(items);
   }, [items, onChange]);
+
+  useEffect(() => {
+    if (reset) {
+      setItems(0);
+    }
+  }, [reset]);
 
   return (
     <div className="counter">
