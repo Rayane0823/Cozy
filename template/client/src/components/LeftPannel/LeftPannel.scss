@@ -6,6 +6,10 @@
       align-items: center;
       justify-content: space-between;
     }
+
+    .back-button {
+      cursor: pointer;
+    }
   
     .breadcrumb {
       margin-top: 1.5rem;
@@ -53,6 +57,7 @@
   
       .description {
         margin-top: 3rem;
+        padding-bottom: 2rem;
       }
   
       .color-selection {

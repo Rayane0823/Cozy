@@ -39,5 +39,13 @@
         font-weight: bold;
         color: $black;
     }
+
+    .remove-cart-button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: red;
+      font-size: 1.1rem;
+    }
   }
   

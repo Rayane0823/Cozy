@@ -9,7 +9,6 @@ import Facebook from "../../../public/images/facebook.svg";
 import Twitter from "../../../public/images/twitter.svg";
 import Pinterest from "../../../public/images/pinterest.svg";
 import Instagram from "../../../public/images/instagram.svg";
-import ColorSelection from "../../../public/images/color_selection.svg";
 import { useCart } from "../Context/CartContext";
 
 const LeftPannel = () => {
@@ -33,7 +32,7 @@ const LeftPannel = () => {
   return ( 
     <div className="left-pannel">
       <div className="header">
-        <img src={Back} alt="Back" />
+        <img src={Back} alt="Back" className="back-button" />
         <p className="breadcrumb">
           <span className="category">Chair</span>
           <span className="divider">/</span>
@@ -52,16 +51,8 @@ const LeftPannel = () => {
           </div>
         </div>
         <p className="description">
-          The gently curved lines accentuated by sewn details are kind to your
-          body and pleasant to look at. Also, there’s a tilt and
-          height-adjusting mechanism that’s built to outlast years of ups and
-          downs.
+        The softly curved lines, highlighted by carefully stitched details, offer both comfort for your body and a pleasing aesthetic. Also, the tilt and height-adjustment mechanism is designed to withstand years of daily use and movement.
         </p>
-        <img
-          src={ColorSelection}
-          alt="Color Selection"
-          className="color-selection"
-        />
         <div className="actions">
           <Counter onChange={setQuantity} reset={resetCounter} />
           <Button onClick={handleAddToCart}>Add To Cart</Button> 
@@ -74,10 +65,19 @@ const LeftPannel = () => {
         <div className="wishlist-and-share">
           <WishlistButton />
           <div className="social-icons">
-            <img src={Facebook} alt="Facebook" />
-            <img src={Twitter} alt="Twitter" />
-            <img src={Pinterest} alt="Pinterest" />
-            <img src={Instagram} alt="Instagram" />
+          <a href="https://www.facebook.com" target="_blank">
+  <img src={Facebook} alt="Facebook" />
+</a>
+<a href="https://www.twitter.com" target="_blank">
+  <img src={Twitter} alt="Twitter" />
+</a>
+<a href="https://www.pinterest.com" target="_blank">
+  <img src={Pinterest} alt="Pinterest" />
+</a>
+<a href="https://www.instagram.com" target="_blank">
+  <img src={Instagram} alt="Instagram" />
+</a>
+
           </div>
         </div>
       </div>
